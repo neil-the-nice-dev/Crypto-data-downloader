@@ -2,6 +2,8 @@ import ccxt
 import pandas as pd
 from datetime import datetime, timedelta
 
+file  = open("ASCII/logo.txt","r",encoding="utf8")                                                                                        
+print(file.read())                                                                                                    
 
 market_type = input("Choose the market type (spot/futures): ").strip().lower()
 
@@ -58,6 +60,6 @@ print(data.head())
 save_to_csv = input("Do you want to save the data to CSV? (yes/no): ").strip().lower()
 
 if save_to_csv == 'yes':
-    filename = symbol.replace("/", "_") + f"_{market_type}_historical_data.csv"
-    data.to_csv(filename, index=False)
+    filename = symbol.replace("/", "_") + f"_{market_type}_{timeframe}.csv"
+    data.to_csv(f'data/{filename}', index=False)
     print(f"Data saved to {filename}")

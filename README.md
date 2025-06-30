@@ -59,5 +59,5 @@ DateTime        Open        High         Low       Close        Volume
 
 Do you want to save the data to CSV? (yes/no): yes
 
-Data saved to BTC_USDT_spot_historical_data.csv
+Data saved to BTC_USDT_spot_1d.csv
 ```

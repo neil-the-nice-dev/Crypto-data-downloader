@@ -14,7 +14,7 @@ This repository contains a Python script that allows users to fetch historical O
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/Cryptocurrency-Historical-Data-Fetcher.git
+    git clone https://github.com/yourusername/Crypto-data-downloader.git
     ```
 
 2. **Install the required packages:**

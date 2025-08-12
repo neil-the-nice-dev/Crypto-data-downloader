@@ -2,8 +2,50 @@ import ccxt
 import pandas as pd
 from datetime import datetime, timedelta
 
+ccxt_exchange_ids = [
+    "binance", "binancecoinm", "binanceusdm", "bingx", "bitget", "bitmart", "bitmex", "bybit",
+    "coinex", "cryptocom", "gate", "hashkey", "htx", "hyperliquid", "kucoin", "kucoinfutures",
+    "mexc", "modetrade", "okx", "woo", "woofipro", "alpaca", "apex", "ascendex", "bequant", "bigone",
+    "binanceus", "bit2c", "bitbank", "bitbns", "bitfinex", "bitflyer", "bithumb", "bitopro", "bitrue",
+    "bitso", "bitstamp", "bitteam", "bittrade", "bitvavo", "blockchaincom", "blofin", "btcalpha",
+    "btcbox", "btcmarkets", "btcturk", "cex", "coinbase", "coinbaseexchange", "coinbaseinternational",
+    "coincatch", "coincheck", "coinmate", "coinmetro", "coinone", "coinsph", "coinspot",
+    "cryptomus", "defx", "delta", "deribit", "derive", "digifinex", "ellipx", "exmo", "fmfwio",
+    "gemini", "hitbtc", "hollaex", "independentreserve", "indodax", "kraken", "krakenfutures",
+    "latoken", "lbank", "luno", "mercado", "myokx", "ndax", "novadax", "oceanex", "okcoin", "okxus",
+    "onetrading", "oxfun", "p2b", "paradex", "paymium", "phemex", "poloniex", "probit", "timex",
+    "tokocrypto", "tradeogre", "upbit", "vertex", "wavesexchange", "whitebit", "xt", "yobit",
+    "zaif", "zonda"
+]
+
+
+exchange_user = input('Choose your exchange (e.g., binance, woo, bingx) !!! make sure its the good synthaxe !!!')
+
+for i in ccxt_exchange_ids:
+    if exchange_user == i :
+        print(f'Its ok the exchange is in the list : {exchange_user} ')
+        exchange = exchange_user
+    if exchange_user != i :
+        exchange = False
+           
+        
+if  exchange == False :
+    print ('the exchange doesnt exist or the synthaxe is wrong')   
+    
+
+while ccxt_exchange_ids:
+    if ccxt_exchange_ids != exchange:
+        ccxt_exchange_ids.pop(0)
+    if ccxt_exchange_ids == exchange:
+            
+    
+    
+    
 file  = open("ASCII/logo.txt","r",encoding="utf8")                                                                                        
 print(file.read())                                                                                                    
+
+
+
 
 market_type = input("Choose the market type (spot/futures): ").strip().lower()
 
